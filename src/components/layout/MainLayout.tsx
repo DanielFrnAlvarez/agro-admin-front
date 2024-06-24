@@ -1,14 +1,17 @@
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
+import { ColorModeContext, useMode } from '../../theme';
+import { ThemeProvider } from '@emotion/react';
+import { CssBaseline } from '@mui/material';
 
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const { theme, colorMode } = useMode();
   return (
-    <div>
-      <Header />
-      <main>{children}</main>
-      <Footer />
-    </div>
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        {children}
+      </ThemeProvider>
+    </ColorModeContext.Provider>
   );
 };
 
