@@ -1,4 +1,4 @@
-import MainLayout from "../components/layout/MainLayout";
+import MainLayout from "../components/layout/Main.layout";
 import Topbar from "../components/menu/Topbar";
 
 const Root: React.FC = () =>{
