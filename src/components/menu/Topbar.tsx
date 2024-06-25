@@ -10,7 +10,7 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 
 import { ColorModeContext, themeSettings } from "../../theme";
 
-const Topbar = () => {
+const Topbar: React.FC = () => {
   const theme = useTheme();
   const colors = themeSettings({ mode: theme.palette.mode });
   const colorMode = useContext(ColorModeContext);

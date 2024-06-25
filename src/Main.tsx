@@ -5,7 +5,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './index.css'
 import Root from './routes/Root.tsx'
 import ErrorPage from './pages/error/Error.page.tsx';
-import { Dashboard } from '@mui/icons-material';
+import Dashboard from './pages/dashboard/Dashboard.page.tsx';
+
 
 const router = createBrowserRouter([
   {
