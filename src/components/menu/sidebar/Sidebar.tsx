@@ -18,6 +18,10 @@ const Sidebar: React.FC = () => {
     "& .ps-menu-button.ps-active": {
       color: "#6870fa",
     },
+    ".ps-sidebar-root.ps-collapsed": {
+      width: '40px',
+      minWidth: '40px',
+    },
     "@media (max-width: 768px)": {
       ".ps-sidebar-root": {
         position: 'fixed',
@@ -28,8 +32,6 @@ const Sidebar: React.FC = () => {
       },
       ".ps-sidebar-root.ps-collapsed": {
         position: 'relative',
-        width: '50px',
-        minWidth: '50px',
         ".ps-menu-button": {
           paddingLeft: '10px',
         },

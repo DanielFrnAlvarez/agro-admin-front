@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Box, Typography, IconButton, useTheme } from '@mui/material';
 import { Menu, MenuItem } from 'react-pro-sidebar';
-import { Link } from 'react-router-dom';
 
-import { AccountCircleOutlinedIcon, HomeOutlinedIcon, MenuOutlinedIcon, ReceiptIcon } from '../../../utils/muiIcons';
+import { AccountCircleOutlinedIcon, Diversity1OutlinedIcon, HomeOutlinedIcon, MenuOutlinedIcon, ReceiptIcon } from '../../../utils/muiIcons';
 import UserSidebar from './User.sidebat';
 
 interface ItemProps {
@@ -35,7 +34,7 @@ const ItemsSidebar: React.FC<{ colors: Colors, isCollapsed: boolean, setIsCollap
       menuItemStyles={{
         button: {
           height: "40px",
-          padding: "5px 35px 5px 20px",
+          padding: "5px 0px 5px 0px",
         }
       }}
     >
@@ -65,21 +64,27 @@ const ItemsSidebar: React.FC<{ colors: Colors, isCollapsed: boolean, setIsCollap
       {!isCollapsed && (
         <UserSidebar colors={colors} />
       )}
-      <Box paddingLeft={isCollapsed ? undefined : "10%"}>
-        <Item title={'Dashboard'} 
+      <Box paddingLeft={isCollapsed ? undefined : "15px"}>
+        <Item title={'Inicio'} 
           to={'/dashboard'} 
           icon={<HomeOutlinedIcon/>} 
           selected={selected} 
           setSelected={setSelected} 
         />
-        <Item title={'Invoices'} 
+        <Item title={'Facturas'} 
           to={'/invoices'} 
           icon={<ReceiptIcon/>} 
           selected={selected} 
           setSelected={setSelected} 
         />
-        <Item title={'Customers'} 
+        <Item title={'Clientes'} 
           to={'/customers'} 
+          icon={<Diversity1OutlinedIcon/>} 
+          selected={selected} 
+          setSelected={setSelected} 
+        />
+        <Item title={'Perfil'} 
+          to={'/profile'} 
           icon={<AccountCircleOutlinedIcon/>} 
           selected={selected} 
           setSelected={setSelected} 

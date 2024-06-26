@@ -8,6 +8,7 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import ReceiptIcon from '@mui/icons-material/Receipt';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import Diversity1OutlinedIcon from '@mui/icons-material/Diversity1Outlined';
 
 export {
   DarkModeOutlinedIcon,
@@ -20,4 +21,5 @@ export {
   HomeOutlinedIcon,
   ReceiptIcon,
   AccountCircleOutlinedIcon,
+  Diversity1OutlinedIcon,
 }

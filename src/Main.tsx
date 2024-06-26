@@ -26,6 +26,12 @@ const router = createBrowserRouter([
         path: "customers",
         element: <Dashboard />
       },
+      {
+        path: "profile",
+        element: <Dashboard />
+      },
+
+      // TODO cambiar dashboard por cada componente
     ]
   },
 ]);
