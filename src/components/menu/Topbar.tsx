@@ -3,19 +3,19 @@ import { useContext } from "react";
 import { Box, IconButton, InputBase, useTheme } from "@mui/material";
 
 
-import { ColorModeContext, themeSettings } from "../../theme";
 import { DarkModeOutlinedIcon, LightModeOutlinedIcon, NotificationsNoneOutlinedIcon, PersonOutlineOutlinedIcon, SearchOutlinedIcon, SettingsOutlinedIcon } from "../../utils/muiIcons";
+import { designTokens, ColorModeContext } from "../../theme/theme";
 
 const Topbar: React.FC = () => {
   const theme = useTheme();
-  const colors = themeSettings({ mode: theme.palette.mode });
+  const colors = designTokens({mode: theme.palette.mode});
   const colorMode = useContext(ColorModeContext);
   return (
     <Box display='flex' justifyContent='space-between' p={2}>
       {/* SEARCH BAR */}
       <Box
         display='flex'
-        bgcolor={colors.palette.mode}
+        bgcolor={colors.primary[400]}
         borderRadius='3px'
       >
         <InputBase sx={{ ml: 2, flex: 1 }} placeholder='Search'></InputBase>
