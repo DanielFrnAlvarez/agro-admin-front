@@ -1,4 +1,4 @@
-import { User, UserRole } from "../types/userTypes";
+import { User, UserRole } from "../types/user.types";
 
 export const mockDataTeam: User[] = [
   {
