@@ -22,7 +22,7 @@ const Item: React.FC<ItemProps> = ({ title, to, icon, selected, setSelected }) =
       icon={icon}
     >
       <Typography>{title}</Typography>
-      <Link to={to} />
+      {/* <Link to={to} /> */}
     </MenuItem>
   )
 }
@@ -35,7 +35,7 @@ const ItemsSidebar: React.FC<{ colors: Colors, isCollapsed: boolean, setIsCollap
       menuItemStyles={{
         button: {
           height: "40px",
-          padding: "5px 35px 5px 20px !important",
+          padding: "5px 35px 5px 20px",
         }
       }}
     >

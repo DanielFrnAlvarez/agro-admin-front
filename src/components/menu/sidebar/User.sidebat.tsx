@@ -1,7 +1,10 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, useTheme } from '@mui/material';
 
 const UserSidebar: React.FC<{ colors: Colors }> = ({ colors }) => {
+  
+  const theme = useTheme();
+
   return (
     <Box mb="25px">
       <Box display="flex" justifyContent="center" alignItems="center">
@@ -9,7 +12,10 @@ const UserSidebar: React.FC<{ colors: Colors }> = ({ colors }) => {
           alt="profile-user"
           width="100px"
           height="100px"
-          src={`/src/assets/app_logo.svg`}
+          src={`${theme.palette.mode === 'dark'
+            ? '/src/assets/images/app_logo.png'
+            : '/src/assets/images/app_logo_dark.png'
+          }`}
         />
       </Box>
       <Box textAlign="center">
