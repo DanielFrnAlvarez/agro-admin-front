@@ -1,6 +1,6 @@
 import { createContext, useState, useMemo } from "react";
 import { createTheme } from "@mui/material/styles";
-import { darkModeTokens, fontFamily, lightModeTokens, whiteApp } from "./utils/designTokens";
+import { darkModeTokens, lightModeTokens, whiteApp, fontFamily } from "./designTokens";
 
 // Definimos la interfaz para el modo
 type Mode = 'dark' | 'light';
