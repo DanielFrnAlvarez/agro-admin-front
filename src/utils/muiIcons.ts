@@ -9,6 +9,9 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import ReceiptIcon from '@mui/icons-material/Receipt';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import Diversity1OutlinedIcon from '@mui/icons-material/Diversity1Outlined';
+import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
+import WorkspacesOutlinedIcon from '@mui/icons-material/WorkspacesOutlined';
+import InsertChartOutlinedTwoToneIcon from '@mui/icons-material/InsertChartOutlinedTwoTone';
 
 export {
   DarkModeOutlinedIcon,
@@ -22,4 +25,7 @@ export {
   ReceiptIcon,
   AccountCircleOutlinedIcon,
   Diversity1OutlinedIcon,
+  CalendarMonthOutlinedIcon,
+  WorkspacesOutlinedIcon,
+  InsertChartOutlinedTwoToneIcon,
 }

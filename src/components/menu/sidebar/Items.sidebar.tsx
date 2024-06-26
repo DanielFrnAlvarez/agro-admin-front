@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Box, Typography, IconButton, useTheme } from '@mui/material';
 import { Menu, MenuItem } from 'react-pro-sidebar';
 
-import { AccountCircleOutlinedIcon, Diversity1OutlinedIcon, HomeOutlinedIcon, MenuOutlinedIcon, ReceiptIcon } from '../../../utils/muiIcons';
+import { AccountCircleOutlinedIcon, CalendarMonthOutlinedIcon, Diversity1OutlinedIcon, HomeOutlinedIcon, InsertChartOutlinedTwoToneIcon, MenuOutlinedIcon, ReceiptIcon, WorkspacesOutlinedIcon } from '../../../utils/muiIcons';
 import UserSidebar from './User.sidebat';
 
 interface ItemProps {
@@ -65,29 +65,62 @@ const ItemsSidebar: React.FC<{ colors: Colors, isCollapsed: boolean, setIsCollap
         <UserSidebar colors={colors} />
       )}
       <Box paddingLeft={isCollapsed ? undefined : "15px"}>
-        <Item title={'Inicio'} 
-          to={'/dashboard'} 
-          icon={<HomeOutlinedIcon/>} 
-          selected={selected} 
-          setSelected={setSelected} 
+        <Item title={'Inicio'}
+          to={'/dashboard'}
+          icon={<HomeOutlinedIcon />}
+          selected={selected}
+          setSelected={setSelected}
         />
-        <Item title={'Facturas'} 
-          to={'/invoices'} 
-          icon={<ReceiptIcon/>} 
-          selected={selected} 
-          setSelected={setSelected} 
+        <Typography
+          variant="h6"
+          color={colors.grey[300]}
+          sx={{ m: "15px 0 5px 0px" }}
+        >Contable</Typography>
+        <Item title={'Facturas'}
+          to={'/invoices'}
+          icon={<ReceiptIcon />}
+          selected={selected}
+          setSelected={setSelected}
         />
-        <Item title={'Clientes'} 
-          to={'/customers'} 
-          icon={<Diversity1OutlinedIcon/>} 
-          selected={selected} 
-          setSelected={setSelected} 
+        <Item title={'Clientes'}
+          to={'/customers'}
+          icon={<Diversity1OutlinedIcon />}
+          selected={selected}
+          setSelected={setSelected}
         />
-        <Item title={'Perfil'} 
-          to={'/profile'} 
-          icon={<AccountCircleOutlinedIcon/>} 
-          selected={selected} 
-          setSelected={setSelected} 
+        <Typography
+          variant="h6"
+          color={colors.grey[300]}
+          sx={{ m: "15px 0 5px 0px" }}
+        >Interno</Typography>
+        <Item title={'Perfil'}
+          to={'/profile'}
+          icon={<AccountCircleOutlinedIcon />}
+          selected={selected}
+          setSelected={setSelected}
+        />
+        <Item title={'Calendario'}
+          to={'/calendar'}
+          icon={<CalendarMonthOutlinedIcon />}
+          selected={selected}
+          setSelected={setSelected}
+        />
+        <Item title={'Equipo de trabajo'}
+          to={'/team'}
+          icon={<WorkspacesOutlinedIcon />}
+          selected={selected}
+          setSelected={setSelected}
+        />
+        <Typography
+          variant="h6"
+          color={colors.grey[300]}
+          sx={{ m: "15px 0 5px 0px" }}
+        >Información</Typography>
+        <Item title={'Gráficas'}
+          to={'/charts'}
+          icon={<InsertChartOutlinedTwoToneIcon />}
+          selected={selected}
+          setSelected={setSelected}
         />
       </Box>
     </Menu>

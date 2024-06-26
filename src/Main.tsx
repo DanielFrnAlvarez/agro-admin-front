@@ -30,6 +30,18 @@ const router = createBrowserRouter([
         path: "profile",
         element: <Dashboard />
       },
+      {
+        path: "calendar",
+        element: <Dashboard />
+      },
+      {
+        path: "team",
+        element: <Dashboard />
+      },
+      {
+        path: "charts",
+        element: <Dashboard />
+      },
 
       // TODO cambiar dashboard por cada componente
     ]
