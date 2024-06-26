@@ -1,5 +1,5 @@
 export const whiteApp = "#fcfcfc"
-export const fontFamily = ["Source Sans 3", "sans-serif"].join(",")
+export const fontFamily = "Roboto, sans-serif"
 
 // Design tokens for dark and light modes
 export const darkModeTokens = {
