@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Box, useTheme } from '@mui/material';
 import { Sidebar as ReactSidebar, sidebarClasses } from 'react-pro-sidebar';
 
@@ -13,14 +13,17 @@ const Sidebar: React.FC = () => {
   const sliderBarStyles = {
     "#root & .ps-menu-button:hover": {
       color: "#868dfb",
-      backgroundColor: `${colors.greenAccent[400]}`,
+      backgroundColor: colors.primary[300],
+    },
+    ".ps-menu-icon ":{
+      marginRight: 0,
     },
     "& .ps-menu-button.ps-active": {
       color: "#6870fa",
     },
     ".ps-sidebar-root.ps-collapsed": {
-      width: '40px',
-      minWidth: '40px',
+      width: '65px',
+      minWidth: '65px',
     },
     "@media (max-width: 768px)": {
       ".ps-sidebar-root": {
@@ -41,20 +44,26 @@ const Sidebar: React.FC = () => {
       }
     }
   };
+
+  const overlayStyles = {
+    "@media (max-width: 768px)": {
+      display: isCollapsed ? 'none' : 'block',
+      zIndex: 2,
+      content: '""',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      backgroundColor: 'rgba(0, 0, 0, 0.5)'
+    },
+  };
+
   return (
-    <Box
-      sx={sliderBarStyles}
-    >
-      <Box
-        sx={{
-          "@media (max-width: 768px)": {
-            display: `${isCollapsed ? 'none' : 'block'}`, zIndex: 2,
-            content: '""', position: 'absolute', top: 0, left: 0,
-            width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.5)'
-          },
-        }}
-      />
-      <ReactSidebar collapsed={isCollapsed}
+    <Box sx={sliderBarStyles}>
+      <Box sx={overlayStyles} />
+      <ReactSidebar
+        collapsed={isCollapsed}
         rootStyles={{
           height: '100%',
           border: 'transparent',
@@ -63,7 +72,11 @@ const Sidebar: React.FC = () => {
           },
         }}
       >
-        <ItemsSidebar colors={colors} isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed} />
+        <ItemsSidebar
+          colors={colors}
+          isCollapsed={isCollapsed}
+          setIsCollapsed={setIsCollapsed}
+        />
       </ReactSidebar>
     </Box>
   );
